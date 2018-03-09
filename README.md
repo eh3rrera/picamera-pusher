@@ -1,15 +1,11 @@
 # picamera-pusher
 
-iOS app that shows photos in a feed in realtime from a [Raspberry Pi Python process](https://github.com/eh3rrera/picamera-pusher) using Pusher.
+Python script that takes pictures at a certain interval with the Raspberry Pi camera, then save them to a web server and publish the URL to a Pusher channel so an iOS app can show them in a realtime photo feed.
 
-# Requirements
+You can follow the [tutorial](https://pusher.com/tutorials/photo-feed-swift-raspberrypi/) to build this application or jump straight to the code.
 
-- A [Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
-- A [Raspberry Pi Camera Module](https://www.raspberrypi.org/products/camera-module-v2/)
-- [ngrok](https://ngrok.com/)
-- A [Pusher account](https://pusher.com/signup)
+## Getting Started
 
-# Installation
 1. Make sure you have all the development dependencies installed in your Raspberry Pi by executing `sudo apt-get install build-essential libssl-dev python-dev libffi-dev`.
 2. [Install a web server](https://www.raspberrypi.org/documentation/remote-access/web-server/).
 3. Create the directory `photos` under `/var/www/html/` and give it permissions (by changing the owner):
@@ -25,5 +21,22 @@ iOS app that shows photos in a feed in realtime from a [Raspberry Pi Python proc
 11. Execute `python camera.py`.
 12. When your done, stop the program with `Ctrl-C` and deactivate your virutal environment with `deactivate`.
 
-# License
+### Prerequisites
+
+- A [Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
+- A [Raspberry Pi Camera Module](https://www.raspberrypi.org/products/camera-module-v2/)
+- [ngrok](https://ngrok.com/)
+- A [Pusher account](https://pusher.com/signup)
+
+## Built With
+
+* [Pusher](https://pusher.com/) - APIs to enable devs building realtime features
+* [Python](https://www.python.org/) - A programming language that lets you work quickly
+and integrate systems more effectively.
+
+## Acknowledgments
+
+* Thanks to [Pusher](https://pusher.com/) for sponsoring this tutorial.
+
+## License
 MIT
